@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
     <style>
-            body {
-                background-color:aliceblue;
-            }
-            h1 {
-                color: crimson;
-            }
+        body {
+            background-color:  rgba(133, 161, 255, 1);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+
+        }
+
+        #Link {
+            font-size: 20px;
+        }
+
+        #Habilidades {
+            font-size: 20px;
+        }
+
+        #Name {
+            background-color: goldenrod;
+            text-decoration: underline;
+            font-size: 25px;
+
+        }
+
+        .List {
+            font-size: 20px;
+            text-align: justify;
+            line-height: 30px;
+            font-style: italic;
+            background-color: rgba(230, 94, 45, 1);
+        }
+
+        #habilidades1 {
+            font-size:  25px;
+            font-weight: 600;
+        }
     </style>
 
 </head>
+
 <body>
-<h1>Portfólio</h1>
-<a href="#Arthur.jpeg"> Foto Minha</a>
-<br> <br>
-<a href="#habilidades">Minhas habilidades</a>
-<p> Meu nome é <strong><big>Arthur Luciano Marciano Freitas</big></strong>.
-    <br><br>
-    Nasci no <strong>Brasil</strong>, no estado de Minas Gerais, na cidade de Vespasiano.
-    <br><br>
-</p>
-<p id="habilidades">
-    Minhas habilidades principais são;
-    <ul>
+    <h1>Portfólio</h1>
+    <a href="#Arthur.jpeg" id="Link"> Foto Minha</a>
+    <br> <br>
+    <a href="#habilidades" id="habilidades">Minhas habilidades</a>
+    <p id="Name"> Meu nome é Arthur Luciano M. Freitas.
+        <br><br>
+        Nasci no <strong>Brasil</strong>, no estado de Minas Gerais, na cidade de Vespasiano.
+        <br><br>
+    </p>
+    <p id="habilidades1">
+        Minhas habilidades principais são;
+    <ul class="List">
         <li>Trabalho bem em equipe.</li>
         <br>
         <li>Conhecimentos sobre <strong>Terminal <em> Unix </em></strong> .</li>
@@ -41,9 +78,11 @@
         <li> E a habilidade que mais me orgulho a minha <strong><em>busca constante por aprendizado.</em></strong></li>
     </ul>
     <br><br>
-    Um site que uso muito para guardar meus projetos é o <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    Um site que uso muito para guardar meus projetos é o <a href="https://github.com/" target="_blank"
+        rel="noopener noreferrer">GitHub</a>
     pois ele me permite controlar bem meus projetos e exercícios, por isso recomendo ele a todos.
-</p>
-<p id="Arthur.jpeg"> <img src="Imagem/Arthur.jpeg" alt="" width="300px"></p>
+    </p>
+    <p id="Arthur.jpeg"> <img src="Imagem/Arthur.jpeg" alt="" width="500px"></p>
 </body>
+
 </html>
