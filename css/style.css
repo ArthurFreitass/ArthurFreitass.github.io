@@ -1,0 +1,561 @@
+:root {
+    --background: #0D0D0D;
+    --secondBackground: #161616;
+    --cards: #1F1F1F;
+
+    --primary: #E11D48;
+    --hover: #BE123C;
+    --suave: #F43F5E;
+
+    --mainText: #F5F5F5;
+    --addText: #D1D5DB;
+    --descriptionText: #9CA3AF;
+
+    --bord: #2A2A2A;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+body {
+    background-color: var(--background);
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 30px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--secondBackground);
+    border-radius: 1rem;
+}
+
+.header svg {
+    width: 250px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+#links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+#links a {
+    color: var(--addText);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    transform: scale(5);
+}
+
+#links a:hover {
+    padding: 0.3rem;
+    color: var(--hover);
+}
+
+.main {
+    width: 100%;
+}
+
+#banner {
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    background-image: url("https://4kwallpapers.com/images/wallpapers/eat-sleep-code-repeat-black-background-programmer-quotes-1920x1080-5947.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.banner-wrapper {
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.banner-text {
+    max-width: 500px;
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    color: var(--mainText);
+}
+
+.banner-text p {
+    margin-top: 1rem;
+    color: var(--descriptionText);
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--hover);
+}
+
+.banner-image img {
+    width: 220px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--suave);
+    transition: 0.4s;
+}
+
+.banner-image img:hover {
+    box-shadow: 0 0 40px var(--suave);
+    padding: 0.2rem;
+}
+
+.footer {
+    background-color: var(--secondBackground);
+    border-top: 1px solid var(--bord);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 5%;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-brand svg {
+    width: 130px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.footer-brand p {
+    color: var(--descriptionText);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 260px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    color: var(--mainText);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--addText);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--hover);
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--addText);
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.social-icons svg {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--bord);
+}
+
+.footer-bottom p {
+    color: var(--descriptionText);
+    font-size: 0.8rem;
+}
+
+/* Responsividade do footer */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-brand svg {
+        width: 100px;
+    }
+
+    .footer-links h3,
+    .footer-social h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets e telas médias (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .banner-wrapper {
+        max-width: 900px;
+        gap: 1.5rem;
+    }
+
+    .banner-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .banner-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Celulares grandes e tablets pequenos*/
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+
+    .header svg {
+        width: 140px;
+    }
+
+    #links {
+        gap: 1.5rem;
+    }
+
+    #links a {
+        font-size: 14px;
+    }
+
+    .banner-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .banner-text {
+        max-width: 100%;
+    }
+
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text p {
+        font-size: 0.95rem;
+    }
+
+    .banner-image img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Celulares pequenos (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .header svg {
+        width: 120px;
+    }
+
+    #links {
+        gap: 1rem;
+    }
+
+    #links a {
+        font-size: 12px;
+    }
+
+    .banner-wrapper {
+        padding: 2rem 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .banner-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-text p {
+        text-align: justify;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .banner-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media screen and (max-width: 320px) {
+    .header svg {
+        width: 100px;
+    }
+
+    #links {
+        gap: 0.8rem;
+    }
+
+    #links a {
+        font-size: 11px;
+    }
+
+    .banner-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner-text p {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .banner-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Desktop HD e TVs pequenas (1025px - 1366px) */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    .banner-wrapper {
+        max-width: 1000px;
+    }
+
+    .banner-text h1 {
+        font-size: 2.3rem;
+    }
+}
+
+/* Desktop Full HD (1367px - 1920px) */
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+    .banner-wrapper {
+        max-width: 1300px;
+    }
+
+    .banner-text h1 {
+        font-size: 3rem;
+    }
+
+    .banner-text p {
+        font-size: 1.1rem;
+    }
+
+    .banner-image img {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+/* Telas muito grandes (TVs e monitores 4K - acima de 1920px) */
+@media screen and (min-width: 1921px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .nav {
+        max-width: 1800px;
+        height: 100px;
+    }
+
+    .header svg {
+        width: 220px;
+    }
+
+    #links a {
+        font-size: 18px;
+    }
+
+    .banner-wrapper {
+        max-width: 1600px;
+        gap: 4rem;
+    }
+
+    .banner-text h1 {
+        font-size: 4rem;
+    }
+
+    .banner-text p {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .banner-image img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Ajustes para orientação landscape em celulares */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #banner {
+        min-height: auto;
+    }
+
+    .banner-wrapper {
+        padding: 2rem 0;
+    }
+
+    .banner-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-text p {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
+    .banner-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Ajustes para telas de alta densidade (retina) */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .banner-image img {
+        border-width: 2px;
+    }
+}
+
+/* Suporte para prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Ajuste para navegadores que suportam container queries (modernos) */
+@container (max-width: 600px) {
+    .banner-text h1 {
+        font-size: 1.3rem;
+    }
+}
