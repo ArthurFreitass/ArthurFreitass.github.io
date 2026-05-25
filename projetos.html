@@ -198,6 +198,14 @@
             <p>&copy; 2026 Arthur Dev. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('links');
+
+        menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuIcon.classList.toggle('open');
+    });
+    </script>
 </body>
 </html>
