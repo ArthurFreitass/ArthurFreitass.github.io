@@ -37,6 +37,7 @@ body {
     width: 100%;
     background-color: var(--secondBackground);
     border-radius: 1rem;
+    border: none;
 }
 
 .header svg {
