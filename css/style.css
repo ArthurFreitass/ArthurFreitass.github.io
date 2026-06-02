@@ -316,8 +316,13 @@ body {
     }
 }
 
-/* Celulares grandes e tablets pequenos*/
+/* Celulares grandes e tablets pequenos */
 @media screen and (max-width: 768px) {
+    /* NOVO: compensa a altura maior do header mobile */
+    body {
+        padding-top: 120px;
+    }
+
     .nav {
         flex-direction: column;
         height: auto;
@@ -364,6 +369,11 @@ body {
 
 /* Celulares pequenos (320px - 480px) */
 @media screen and (max-width: 480px) {
+    /* NOVO: ajuste fino para telas menores */
+    body {
+        padding-top: 105px;
+    }
+
     .header svg {
         width: 120px;
     }
@@ -404,6 +414,11 @@ body {
 
 /* Celulares muito pequenos (até 320px) */
 @media screen and (max-width: 320px) {
+    /* NOVO: compensação para telas muito estreitas */
+    body {
+        padding-top: 95px;
+    }
+
     .header svg {
         width: 100px;
     }
